@@ -42,13 +42,13 @@ function repair(item) {
 }
 
 function get(item) {
-	let { name, enhancement, durabilty } = item;
+	let { name, enhancement } = item;
 
 	name = `[+${enhancement}] ${name}`;
 
 	return {
+		...item,
 		name,
-		enhancement,
-		durabilty
+		enhancement
 	};
 }
