@@ -6,7 +6,13 @@ module.exports = {
 };
 
 function succeed(item) {
-	return { ...item };
+	item.enhancement !== 20 ? (item.enhancement += 1) : item.level;
+
+	return {
+		name: item.name,
+		enhancement: item.enhancement,
+		durabilty: item.durabilty
+	};
 }
 
 function fail(item) {
