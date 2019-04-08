@@ -73,7 +73,7 @@ describe('Enhancer get method tests', () => {
 	test('Adds level to name i.e: [+7] Staff', () => {
 		expect(get({ name: 'Staff', enhancement: 7, durabilty: 20 })).toEqual({
 			name: '[+7] Staff',
-			enhancement: 6,
+			enhancement: 7,
 			durabilty: 20
 		});
 	});
