@@ -31,13 +31,12 @@ function fail(item) {
 }
 
 function repair(item) {
-	let { name, enhancement, durabilty } = item;
+	let { durabilty } = item;
 
 	durabilty = 100;
 
 	return {
-		name,
-		enhancement,
+		...item,
 		durabilty
 	};
 }
