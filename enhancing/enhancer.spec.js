@@ -32,6 +32,15 @@ describe('Enhancer tests', () => {
 			enhancement: 14,
 			durabilty: 15
 		});
+
+		// If the item's enhancement is 15 or more, the durability of the item is decreased by 10.
+		expect(
+			succeed({ name: 'Staff', enhancement: 15, durabilty: 20 })
+		).toEqual({
+			name: 'Staff',
+			enhancement: 15,
+			durabilty: 10
+		});
 	});
 
 	// Enhancer repair method tests
