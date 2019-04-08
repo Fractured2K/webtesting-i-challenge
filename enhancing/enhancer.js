@@ -6,14 +6,13 @@ module.exports = {
 };
 
 function succeed(item) {
-	let { name, enhancement, durabilty } = item;
+	let { enhancement } = item;
 
 	enhancement !== 20 ? (enhancement += 1) : enhancement;
 
 	return {
-		name,
-		enhancement,
-		durabilty
+		...item,
+		enhancement
 	};
 }
 
@@ -21,7 +20,7 @@ function fail(item) {
 	let { name, enhancement, durabilty } = item;
 
 	if (enhancement < 15) durabilty -= 5;
-	if (enhancement >= 15 && enhancement < 17) durabilty -= 10;
+	if (enhancement >= 15) durabilty -= 10;
 	if (enhancement > 16) enhancement -= 1;
 
 	return {
