@@ -17,14 +17,14 @@ function succeed(item) {
 }
 
 function fail(item) {
-	let { name, enhancement, durabilty } = item;
+	let { enhancement, durabilty } = item;
 
 	if (enhancement < 15) durabilty -= 5;
 	if (enhancement >= 15) durabilty -= 10;
 	if (enhancement > 16) enhancement -= 1;
 
 	return {
-		name,
+		...item,
 		enhancement,
 		durabilty
 	};
