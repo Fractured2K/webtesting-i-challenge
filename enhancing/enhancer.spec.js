@@ -41,6 +41,15 @@ describe('Enhancer tests', () => {
 			enhancement: 15,
 			durabilty: 10
 		});
+
+		// If the item's enhancement level is greater than 16, the enhancement level decreases by 1 (17 goes down to 16, 18 goes down to 17).
+		expect(
+			succeed({ name: 'Staff', enhancement: 17, durabilty: 20 })
+		).toEqual({
+			name: 'Staff',
+			enhancement: 16,
+			durabilty: 20
+		});
 	});
 
 	// Enhancer repair method tests
