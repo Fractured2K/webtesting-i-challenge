@@ -32,10 +32,14 @@ function fail(item) {
 }
 
 function repair(item) {
+	let { name, enhancement, durabilty } = item;
+
+	durabilty = 100;
+
 	return {
-		name: item.name,
-		enhancement: item.enhancement,
-		durabilty: 100
+		name,
+		enhancement,
+		durabilty
 	};
 }
 
