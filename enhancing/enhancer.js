@@ -6,12 +6,14 @@ module.exports = {
 };
 
 function succeed(item) {
-	item.enhancement !== 20 ? (item.enhancement += 1) : item.level;
+	let { name, enhancement, durabilty } = item;
+
+	enhancement !== 20 ? (enhancement += 1) : enhancement;
 
 	return {
-		name: item.name,
-		enhancement: item.enhancement,
-		durabilty: item.durabilty
+		name,
+		enhancement,
+		durabilty
 	};
 }
 
