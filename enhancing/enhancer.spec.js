@@ -2,7 +2,7 @@ const { succeed, fail, repair, get } = require('./enhancer.js');
 
 describe('Enhancer tests', () => {
 	// Succeed
-	test('accepts item (object) and returns new item (object) modified defined by the client for enhancement success', () => {
+	test('accepts item (object) and returns new item (object). if enhancement level is less than 20 go up by one if not stay the same', () => {
 		// check to see if item enhancement level goes up by 1
 		expect(
 			succeed({ name: 'Staff', enhancement: 6, durabilty: 20 })
